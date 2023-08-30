@@ -6,3 +6,5 @@ print(sys.platform)
 #o primeiro módulo executado pelo python se chama __main__
 #pastas no python são chamadas de pacotes 
 
+#import é um singleton, ou seja, só ocorre uma instância
+#para repetir um módulo é preciso usar importlib.reload(nome_do_modulo)
