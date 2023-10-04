@@ -42,6 +42,28 @@ cursor.execute(sql, ['joana', 4])
 cursor.executemany(sql, [['luiz', 5], ['jonas', 15]])
 connection.commit()
 
+cursor.execute(
+    f'DELETE FROM {TABLE_NAME} '
+    'WHERE id = "3"'
+)
+connection.commit()
+
+cursor.execute(
+    f'UPDATE {TABLE_NAME} '
+    'SET name = "Zeca", weight = 77.89 '
+    'WHERE id = 2'
+)
+
+
+connection.commit()
+
+cursor.execute(
+    f'SELECT * from {TABLE_NAME}'    
+)
+for row in cursor.fetchall():
+    _id, name, weight = row
+    print(_id, name, weight)
+
 
 
 

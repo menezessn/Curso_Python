@@ -1,2 +1,4 @@
 venv/
 .vscode/
+mysql_206
+.env
